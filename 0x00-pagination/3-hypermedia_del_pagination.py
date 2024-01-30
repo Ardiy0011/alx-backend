@@ -41,15 +41,9 @@ class Server:
 
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
         """
-        The goal here is that if between two queries,
+        function where if between two queries,
         certain rows are removed from the dataset, the user
         does not miss items from dataset when changing page.
-        Args:
-            index (int): start index of the current page
-            page_size (int): size of items required in current page
-        Returns:
-            Dict[int, int|List[List]|None]: a dict of the following:
-                * index, next_index, page_size, data
         """
         focus = []
         dataset = self.indexed_dataset()

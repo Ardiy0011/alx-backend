@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Adds `get_hyper` method to `Server` class
+function that Adds `get_hyper` method to `Server` class
 """
 import csv
 from typing import Dict, List, Tuple, Union
@@ -35,12 +35,6 @@ class Server:
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """
         Get items for the given page number
-        Args:
-            page (int): page number
-            page_size (int): number of items per page
-        Returns:
-            (List[List]): a list of list(row) if inputs are within range
-            ([]) : an empty list if page and page_size are out of range
         """
         assert type(page) == int and type(page_size) == int
         assert page > 0 and page_size > 0
