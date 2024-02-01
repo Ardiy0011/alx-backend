@@ -8,7 +8,7 @@ BaseCaching = __import__('base_caching').BaseCaching
 
 class MRUCache(BaseCaching):
     """
-    An implementation of MRU(Most Recently Used) Cache
+    An implementation of MRU Cache
     """
     def __init__(self):
         """ Instantiation method, sets instance attributes
@@ -37,7 +37,7 @@ class MRUCache(BaseCaching):
         return value
 
     def _balance(self, keyIn):
-        """ Removes the earliest item from the cache at MAX size
+        """ Removes the earliest item from the cache
         """
         keyOut = None
         with self.__rlock:

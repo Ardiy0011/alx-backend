@@ -8,7 +8,7 @@ BaseCaching = __import__('base_caching').BaseCaching
 
 class LRUCache(BaseCaching):
     """
-    An implementation of LRU(Last Recently Used) Cache
+    An implementation of LRU Cache
     """
     def __init__(self):
         """ Instantiation method, sets instance attributes
@@ -37,7 +37,7 @@ class LRUCache(BaseCaching):
         return value
 
     def _balance(self, keyIn):
-        """ Removes the earliest item from the cache at MAX size
+        """ Removes the earliest item from the cache
         """
         keyOut = None
         with self.__rlock:

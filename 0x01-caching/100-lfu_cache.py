@@ -37,7 +37,7 @@ class LFUCache(BaseCaching):
         return value
 
     def _balance(self, keyIn):
-        """ Removes the earliest item from the cache at MAX size
+        """ Removes the earliest item from the cache
         """
         keyOut = None
         with self.__rlock:
