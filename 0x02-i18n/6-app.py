@@ -1,15 +1,14 @@
 #!/usr/bin/env python3
 """
-A Basic flask application
+A flask instsance with index.html route rendered
 """
-from typing import (
-    Dict, Union
-)
-
 from flask import Flask
 from flask import g, request
 from flask import render_template
 from flask_babel import Babel
+from typing import (
+    Dict, Union
+)
 
 
 class Config(object):
@@ -21,11 +20,10 @@ class Config(object):
     BABEL_DEFAULT_TIMEZONE = 'UTC'
 
 
-# Instantiate the application object
 app = Flask(__name__)
 app.config.from_object(Config)
 
-# Wrap the application with Babel
+"""Wrap the application with Babel"""
 babel = Babel(app)
 
 
@@ -40,10 +38,6 @@ users = {
 def get_user(id) -> Union[Dict[str, Union[str, None]], None]:
     """
     Validate user login details
-    Args:
-        id (str): user id
-    Returns:
-        (Dict): user dictionary if id is valid else None
     """
     return users.get(int(id), {})
 
