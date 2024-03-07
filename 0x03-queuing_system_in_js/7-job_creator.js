@@ -1,6 +1,6 @@
 #!/usr/bin/node
 /**
- * Track progress and errors with Kue: Create the Job creator
+ * Track progress and errors with Kue
  */
 import { createQueue } from 'kue';
 

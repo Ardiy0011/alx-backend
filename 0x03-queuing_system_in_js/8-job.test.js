@@ -42,7 +42,7 @@ describe('createPushNotificationsJobs', () => {
   });
 
   it('throws if queue is not a valid kue', function() {
-    expect(() => createPushNotificationsJobs(jobs, "")).to.throw();
+    expect(() => createPushNotificationsJobs(jobs, {})).to.throw();
   });
 
   it('test the creation of jobs', () => {

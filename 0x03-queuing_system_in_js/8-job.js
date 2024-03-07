@@ -8,8 +8,7 @@ function createPushNotificationsJobs(jobs, queue) {
   }
   for (let job of jobs) {
     job = queue.create('push_notification_code_3', job);
-    job
-      .on('complete', (result) => { /* eslint-disable-line no-unused-vars */
+    job.on('complete', (result) => { /* eslint-disable-line no-unused-vars */
         console.log(`Notification job ${job.id} completed`);
       })
       .on('failed', (err) => { /* eslint-disable-line no-unused-vars */

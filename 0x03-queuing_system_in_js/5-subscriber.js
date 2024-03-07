@@ -1,6 +1,6 @@
 #!/usr/bin/node
 /**
- * Connect to redis server via redis client
+ * Connection to redis server
  */
 import { createClient } from 'redis';
 
